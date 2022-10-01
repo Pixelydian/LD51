@@ -113,8 +113,9 @@ function playerStateGrounded(){
 	
 	if landPoint.object_index = oShieldGenerator
 	{
+		if instance_exists(oTutorial) oTutorial.shieldGenerator = true;
 		//If there are humans to unload...
-		if oGui.humansCurrent > 0
+		if oGui.humansCurrent > 0 and landPoint.humansCurrent < landPoint.humansMax
 		{
 			//Load humans into shield generator
 			if loadCooldown++ >= loadCooldownMax

@@ -19,7 +19,7 @@ if complete = true
 			
 			draw_line(x2,y1,x2,y2)	//LEFT LINE
 			draw_line(x3,y1,x3,y2)	//RIGHT LINE
-			var _w = x3-x2,
+			var _w = x3-x2-1,
 				_h = (y2-y1)*-1
 			
 			draw_sprite_stretched(sBeam,0,x2+1,y2,_w,_h)

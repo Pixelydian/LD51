@@ -22,3 +22,10 @@ loadCooldownMax = 60;
 
 //STATE
 state = playerStateFree;
+
+//PLUS 10 SECONDS EVENT
+tenEvent = false;
+tenAlpha = 1;
+float = 0;
+x1 = x;
+y1 = y;

@@ -1,5 +1,5 @@
 function enemyStateScout(){
-
+	if !place_meeting(x,y+maxSpeed,oWall) y+=maxSpeed
 }
 
 
@@ -67,14 +67,3 @@ function enemyStateChase(){
 	motion_add(facing,accel);
 	
 }
-
-
-
-function enemyTakeDamageFighter(){
-	
-}
-
-function enemyTakeDamageScout(){
-	
-}
-

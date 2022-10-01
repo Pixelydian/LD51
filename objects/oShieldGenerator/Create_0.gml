@@ -22,6 +22,14 @@ whiteLight = 1;
 
 spd = 18;
 
+//ADD TO MISSION LOG
+
+with oGame
+{
+	var _array = levels[$ other.level]
+	array_insert(_array,1,other.id);
+}
+
 
 
 
