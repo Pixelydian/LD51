@@ -6,3 +6,4 @@ HP = 1;
 
 state = enemyStateScout
 
+alarm[0] = seconds(3);
