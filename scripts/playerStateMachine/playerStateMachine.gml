@@ -13,17 +13,17 @@ var left = keyboard_check(ord("A")),
 	
 if point_distance(0,0,hMove,vMove) > 0 facing = (point_direction(0,0,hMove,vMove));
 
-//ANIMATE AND ASSIGN SPRITE FRAME
-playerAnimateSprite();
 
 if thrust != 0 
 {
 	if !audio_is_playing(sfx_thruster) audio_play_sound(sfx_thruster,600,true,0.3,0,0.6);
+	if sprite_index != sPlayerThrust localFrame = 0;
 	sprite_index = sPlayerThrust
 	motion_add(facing,accel);
 }
 else 
 {
+	if sprite_index != sPlayer localFrame = 0;
 	sprite_index = sPlayer
 	if audio_is_playing(sfx_thruster) audio_stop_sound(sfx_thruster)
 }
@@ -64,6 +64,9 @@ if place_meeting(x,y,oWall)
 	screenShake(10,120)
 	
 }
+
+//ANIMATE AND ASSIGN SPRITE FRAME
+playerAnimateSprite();
 
 //show_debug_message("direction: "+string(direction))
 //show_debug_message("facing: "+string(facing))
@@ -114,12 +117,14 @@ function playerStateLand(){
 	if speed < 0 speed = 0.1;
 	
 	//ALLOW PLAYER TO EXIT LANDING STATE
+	
 		if keyboard_check(vk_space)
 	{
 		state = playerStateFree;
 		landPoint = noone; //Reset
 		show_debug_message("Player is taking off")
 	}
+	
 	
 	playerAnimateSprite();
 	
@@ -166,6 +171,7 @@ function playerStateGrounded(){
 }
 
 function playerStateDefeat(){
+	if audio_is_playing(sfx_thruster) audio_stop_sound(sfx_thruster)
 	image_alpha = 0;
 	isDefeated++;
 	if isDefeated >= 120

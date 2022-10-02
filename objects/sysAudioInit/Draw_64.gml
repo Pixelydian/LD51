@@ -5,7 +5,7 @@ draw_text(global.res_w*0.5,global.res_h*0.2,"Click the Kitty to Load the Audio")
 
 if screenAlpha > 0
 	{
-		draw_sprite_stretched_ext(sPixel,0,0,0,global.res_w,global.res_h,c_white,screenAlpha)
+		draw_sprite_stretched_ext(sPixel,1,0,0,global.res_w,global.res_h,c_white,screenAlpha)
 	}
 	
 	

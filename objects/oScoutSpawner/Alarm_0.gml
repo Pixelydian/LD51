@@ -1,6 +1,7 @@
 var _roll = random(100)
 
-if _roll <= 30	instance_create_layer(x,y,"Instances",oEnemyScout)
+var _xBuffer = irandom_range(-32,32)
+if _roll <= 20	instance_create_layer(x+_xBuffer,y,"Instances",oEnemyScout)
 
-alarm[0] = seconds(5);
+alarm[0] = seconds(10);
 

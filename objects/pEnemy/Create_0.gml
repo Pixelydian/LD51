@@ -1,10 +1,10 @@
-image_blend = c_red;
+//image_blend = c_red;
 direction = point_direction(x,y,oPlayer.x,oPlayer.y)
 facing = direction;
 localFrame = 0;
 accel = 0.01;
 maxSpeed = 0.5;
-HP = 5;
+HP = 3;
 
 //PATROL VARS
 xTo = x;

@@ -9,7 +9,7 @@ health_x = 164;
 health_y = 24;
 displayHP = 0;
 
-
+alarmTrigger = false;
 
 
 //PAUSE MENU

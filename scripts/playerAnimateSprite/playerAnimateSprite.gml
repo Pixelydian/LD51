@@ -51,7 +51,6 @@ if (localFrame >= _totalFrames)
 {
 	//animationEnd = true for animations that need to repeat. False for one time animation cycles.
 	animationEnd = true;
-	//local frame = localframe - _totalFrames
 	localFrame = abs(localFrame - _totalFrames)	//Bug fix option if image_index is triggering as -0.
 	//localFrame -= _totalFrames
 	//if localFrame <= 0 localFrame = 0;

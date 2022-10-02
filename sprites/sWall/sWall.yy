@@ -67,7 +67,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Collision Tiles",
+    "path": "folders/Sprites/Collision Tiles.yy",
   },
 }

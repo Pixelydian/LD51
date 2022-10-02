@@ -20,6 +20,8 @@ if HP <= 0
 		timerScale = 2;
 		global.masterTimer += seconds(10);
 	}
+	var _roll = random(100)
+	if _roll > 50 instance_create_layer(x,y,"Instances",oHealth)
 	instance_create_layer(x,y,"Instances",oExplosion)
 	audio_play_sound(sfx_smallExplosion,600,false,1,0,0.8)
 	screenShake(5,30);

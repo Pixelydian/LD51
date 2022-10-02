@@ -14,19 +14,18 @@ if global.miniTimer <= 0
 	global.miniTimer = seconds(10);
 	tenEvent = true;
 	var roll = random(100)
-	if room != rLevel1
+	if room != rLevel1 //and room != rLevel2
 	{
-		if roll < 50 instance_create_layer(350,60,"Instances",oEnemyFighter)
+		with oScoutSpawner alarm[1] = 1;
 	}
 }
 
 if missionComplete == true or missionLost == true
 {
-	var _nextStage = global.levels[global.currentLevel]
 	if keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) 
 	{
-		with oGame clearMissions();
-		room_goto(_nextStage);
+		alarm[0] = 60;
+		alarm[1] = 90;
 	}
 }
 

@@ -13,10 +13,10 @@ complete = false;
 
 y1 = bbox_bottom-2;
 y2 = y1;
-x1 = x+15	//Middle of sprite
+x1 = x//x+15	//Middle of sprite
 x2 = x1	//Left hand of current beam
 x3 = x1	//Right side of current beam
-leftX = x1-3	//Left completed beam
+leftX = x1-4	//Left completed beam
 rightX = x1+4	//Right completed beam
 whiteLight = 1;
 

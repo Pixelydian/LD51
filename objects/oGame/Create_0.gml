@@ -3,7 +3,7 @@ global.res_h = 360;
 
 
 global.currentLevel = 0;
-global.levels = [rLevel1,rLevel2];
+global.levels = [rLevel1,rLevel2,rLevel3,rLevel4,rLevel5,rLevel6,rGameEnd];
 
 randomize();
 
@@ -18,7 +18,12 @@ instance_create_layer(0,0,"Instances",oGui)
 function clearMissions(){
 	
 levels = {level_one: [],
-		level_two: []}
+	      level_two: [],
+		  level_three:[],
+		  level_four:[],
+		  level_five:[],
+		  level_six:[],
+		}
 }
 
 clearMissions();

@@ -30,7 +30,7 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Collision Objects",
+    "path": "folders/Objects/Collision Objects.yy",
   },
 }
