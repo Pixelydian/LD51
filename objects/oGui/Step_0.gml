@@ -1,4 +1,6 @@
 
+
+
 if missionComplete == false and missionLost == false
 {
 	global.masterTimer--;

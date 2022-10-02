@@ -19,6 +19,7 @@
     {"id":{"name":"oEnemyBullet","path":"objects/oEnemyBullet/oEnemyBullet.yy",},"order":2,},
     {"id":{"name":"array_find_index","path":"scripts/array_find_index/array_find_index.yy",},"order":4,},
     {"id":{"name":"rLevel6","path":"rooms/rLevel6/rLevel6.yy",},"order":10,},
+    {"id":{"name":"sfx_MainTheme","path":"sounds/sfx_MainTheme/sfx_MainTheme.yy",},"order":8,},
     {"id":{"name":"sfx_PlayerDeath","path":"sounds/sfx_PlayerDeath/sfx_PlayerDeath.yy",},"order":3,},
     {"id":{"name":"rMenu","path":"rooms/rMenu/rMenu.yy",},"order":1,},
     {"id":{"name":"oScoutSpawner","path":"objects/oScoutSpawner/oScoutSpawner.yy",},"order":5,},
