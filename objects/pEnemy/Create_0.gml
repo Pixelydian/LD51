@@ -21,6 +21,12 @@ aggroCheckMax = 5;  //Aggro timer length/max
 bulletCooldown = 0;
 bulletCooldownMax = 30;
 
+//FLASH VARS
+flashDec = 1;
+flashAlpha = 0;
+defaultFlashColor = c_white;
+flashColor = defaultFlashColor;
+
 
 
 

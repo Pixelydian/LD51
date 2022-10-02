@@ -9,7 +9,7 @@ var left = keyboard_check(ord("A")),
 	vMove = down - up,
 	thrust = keyboard_check(vk_space),
 	fire = keyboard_check_pressed(vk_enter),
-	land = keyboard_check_pressed(vk_shift);
+	land = keyboard_check(vk_shift);
 	
 if point_distance(0,0,hMove,vMove) > 0 facing = (point_direction(0,0,hMove,vMove));
 
@@ -53,6 +53,7 @@ for (var _i = 0; _i < landDistance; _i++)
 if land == true and landPoint != noone
 {
 	show_debug_message("Player begins landing")
+	flash(c_yellow,30);
 	state = playerStateLand;
 }
 
@@ -79,6 +80,8 @@ function playerStateLand(){
 		if facing < 90 facing += 2;
 		round(facing);
 	}
+	
+	if flashAlpha <= 0 flash(c_yellow,15);
 	
 	if place_meeting(x,y+1,oWall) 
 	{
@@ -134,6 +137,10 @@ function playerStateLand(){
 
 function playerStateGrounded(){
 	
+	sprite_index = sPlayer;
+	localFrame = 0;
+	image_index = 2;
+	facing = 90;
 	if landPoint.object_index = oShieldGenerator
 	{
 		if instance_exists(oTutorial) oTutorial.shieldGenerator = true;
@@ -168,6 +175,15 @@ function playerStateGrounded(){
 		loadCooldown = 0;
 		show_debug_message("Player is taking off")
 	}	
+	
+if keyboard_check_pressed(vk_enter)
+{
+	instance_create_layer(x,y,"Instances",oBullet,{direction: facing});
+	if !audio_is_playing(sfx_bullet) audio_stop_sound(sfx_bullet)
+	audio_play_sound(sfx_bullet,500,false,choose(0.6,0.8,1),0,choose(0.8,1,1.2))
+}
+
+
 }
 
 function playerStateDefeat(){
@@ -176,6 +192,28 @@ function playerStateDefeat(){
 	isDefeated++;
 	if isDefeated >= 120
 	oGui.missionLost = true;
+}
+
+function playerStatePause(){
+	if facing != 90	//Get to vertical position
+	{
+		if facing > 90 facing -= 2;
+		if facing < 90 facing += 2;
+		round(facing);
+	}
+	
+	//LOWER SHIP
+	if facing >= 89 and facing <= 91 
+	{
+		y += 0.1;
+	}
+	
+	//SLOW DOWN FOR LANDING
+	if speed > 0 speed -= accel
+	if speed < 0 speed = 0.1;
+	
+	playerAnimateSprite();
+
 }
 	
 	

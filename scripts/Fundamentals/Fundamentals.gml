@@ -1,16 +1,5 @@
 //Fundamental Scripts:
 
-//Approach (_a,_b,_amount)	// Moves "a" towards "b" by "amount" and returns the result
-//Wave(_from, _to, _duration, _offset)	// Returns a value that will wave back and forth between [from-to] over [duration] seconds
-//wrap(_value,_min,_max)	// Returns the value wrapped, values over or under will be wrapped around.
-//jumpInDirection(_distance, _direction)	// Teleports parent object to a spot based on given direction and distance
-//chance(_percent)	// Returns true or false depending on RNG
-//screenShake(magnitude,frames)		//Works to make the object oCamera shake back and forth.
-//drawSetText(_color,_font,_halign,_valign)	//Set up text properties
-//arrayShuffle(_array)	//Shuffle an array into a random order
-//seconds(_numberOfSecs)
-
-
 function approach(_a,_b,_amount){
 
 // Moves "a" towards "b" by "amount" and returns the result
@@ -206,5 +195,11 @@ function hex_to_color(_hexString) {
   return _col;
 }
 
+///@func flash(color,length)
+function flash(_color = defaultFlashColor, _length = 10){
+	flashColor = _color;
+	flashAlpha = 1;
+	flashDec = 1/_length;
+}
 
 

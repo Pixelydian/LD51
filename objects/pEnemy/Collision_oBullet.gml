@@ -1,3 +1,5 @@
+flash(c_white,10);
+
 
 HP--
  instance_destroy(other);	//Destroy bullet

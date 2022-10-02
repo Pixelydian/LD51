@@ -1,3 +1,4 @@
+if oGui.humansCurrent >= oGui.humansMax exit;
 
 with oGui humansCurrent++
 

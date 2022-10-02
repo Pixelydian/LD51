@@ -1,4 +1,4 @@
-if !audio_is_playing(sfx_MainTheme) audio_play_sound(sfx_MainTheme,500,true,0.75);
+if !audio_is_playing(sfx_MainTheme) audio_play_sound(sfx_MainTheme,500,true,0.50);
 
 script_execute(state)
 

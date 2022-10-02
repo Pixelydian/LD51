@@ -5,13 +5,15 @@ if HTML = 1
 	if clicked == true and audio_system_is_available()
 	{
 		show_debug_message("HTML 1: sysAudio Initialized")
-		RoomTransition(TRANS_TYPE.FADE,rLevel1);
+		//RoomTransition(TRANS_TYPE.FADE,rLevel1);
+		RoomTransition(TRANS_TYPE.FADE,rMenu);
 		instance_destroy();	
 	}
 }
 else
 {
-	RoomTransition(TRANS_TYPE.FADE,rLevel1);
+	//RoomTransition(TRANS_TYPE.FADE,rLevel1);
+	RoomTransition(TRANS_TYPE.FADE,rMenu);
 	show_debug_message("HTML 0: sysAudio Initialized")
 	instance_destroy();	
 }

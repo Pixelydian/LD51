@@ -5,8 +5,8 @@ accel = 0.01;
 direction = 90;
 facing = direction;
 maxSpeed = 1;
-HP = 50;
-maxHP = 50;
+HP = 30;
+maxHP = 30;
 
 
 //ANIMATION
@@ -17,6 +17,12 @@ animationEnd = false;
 landDistance = 36;	//Distance from ground landing can be initiated
 landPoint = noone;	//Will be assigned id of oWall/tile to land on
 canLand = false;
+
+//FLASH VARS
+flashDec = 1;
+flashAlpha = 0;
+defaultFlashColor = c_white;
+flashColor = defaultFlashColor;
 
 //ARM SHIELD
 loadCooldown = 0;	//Creates delay between undocking a human into a shield generator

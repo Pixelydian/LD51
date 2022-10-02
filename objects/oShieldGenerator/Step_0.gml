@@ -1,5 +1,5 @@
 
-//
+
 if armed = true
 {
 	armedTimer++;

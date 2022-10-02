@@ -24,10 +24,11 @@ if global.miniTimer <= 0
 
 if missionComplete == true or missionLost == true
 {
+	oPlayer.state = playerStatePause;
+	if alarm[0] == -1 alarm[0] = 90;
 	if keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) 
 	{
-		alarm[0] = 60;
-		alarm[1] = 90;
+		if alarm[0] == -1   alarm[0] = 30;
 	}
 }
 

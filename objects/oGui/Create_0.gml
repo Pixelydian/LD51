@@ -33,7 +33,7 @@ boxWidth = x2-x1
 boxHeight = -96
 boxSections = 0;
 boxSectionsMax = 13;
-global.masterTimer = seconds(120);
+global.masterTimer = seconds(90);
 global.miniTimer = seconds(10);
 
 timerScale = 1;	//For increasing size of numbers temporarily
