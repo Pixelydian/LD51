@@ -2,6 +2,9 @@
   "resourceType": "GMHtml5Options",
   "resourceVersion": "1.0",
   "name": "HTML5",
+  "ConfigValues": {
+    "WEB": {"option_html5_loadingbar":"Use Default","option_html5_index":"use_default","option_html5_interpolate_pixels":"false",},
+  },
   "option_html5_browser_title": "Created with GameMaker",
   "option_html5_version": "1.0.0.0",
   "option_html5_foldername": "html5game",

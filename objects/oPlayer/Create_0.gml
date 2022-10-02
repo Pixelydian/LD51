@@ -5,6 +5,8 @@ accel = 0.01;
 direction = 90;
 facing = direction;
 maxSpeed = 1;
+HP = 50;
+maxHP = 50;
 
 
 //ANIMATION
@@ -22,6 +24,7 @@ loadCooldownMax = 60;
 
 //STATE
 state = playerStateFree;
+isDefeated = 0;
 
 //PLUS 10 SECONDS EVENT
 tenEvent = false;
@@ -29,3 +32,11 @@ tenAlpha = 1;
 float = 0;
 x1 = x;
 y1 = y;
+
+//DEFEAT
+c1 = 0;		//Circle/Rings
+c1Alpha = 1;
+c2 = 0;
+c2Alpha = 1;
+c3 = 0;
+c3Alpha = 1;

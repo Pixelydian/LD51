@@ -1,15 +1,6 @@
 
 HP--
-
-with oGui
-	{
-		boxSections--;
-		timerScale = 2;
-		global.masterTimer += seconds(10);
-	}
-	
-	
- instance_destroy(other);
+ instance_destroy(other);	//Destroy bullet
  
 if HP <= 0
 {
@@ -22,6 +13,16 @@ if HP <= 0
 			y1 = other.y;
 		}
 	}
+	
+	with oGui
+	{
+		boxSections--;
+		timerScale = 2;
+		global.masterTimer += seconds(10);
+	}
+	instance_create_layer(x,y,"Instances",oExplosion)
+	audio_play_sound(sfx_smallExplosion,600,false,1,0,0.8)
+	screenShake(5,30);
 	instance_destroy();
 }
 

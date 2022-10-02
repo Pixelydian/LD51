@@ -40,9 +40,14 @@ function enemyStateChase(){
 	{
 		if (instance_exists(oPlayer)) && (point_distance(x,y,oPlayer.x,oPlayer.y) <= radiusAttack)
 		{
-			instance_create_layer(x,y,"Instances",oEnemyBullet,{direction: facing});	
-			bulletCooldown = 0;	//Reset bullet timer
-			show_debug_message("ENEMY ATTACKS")
+			var _roll = random(100)
+			if _roll > 50
+			{
+				instance_create_layer(x,y,"Instances",oEnemyBullet,{direction: facing});
+				if !audio_is_playing(sfx_bullet) audio_play_sound(sfx_bullet,200,false,0.5,0,choose(0.4,0.5,0.6));
+				bulletCooldown = 0;	//Reset bullet timer
+				show_debug_message("ENEMY ATTACKS")
+			}
 		}
 	}
 	

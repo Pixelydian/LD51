@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "oEnemyFighter",
-  "spriteId": null,
+  "spriteId": {
+    "name": "sEnemy",
+    "path": "sprites/sEnemy/sEnemy.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

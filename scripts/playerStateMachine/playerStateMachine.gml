@@ -16,7 +16,17 @@ if point_distance(0,0,hMove,vMove) > 0 facing = (point_direction(0,0,hMove,vMove
 //ANIMATE AND ASSIGN SPRITE FRAME
 playerAnimateSprite();
 
-if thrust != 0 motion_add(facing,accel);
+if thrust != 0 
+{
+	if !audio_is_playing(sfx_thruster) audio_play_sound(sfx_thruster,600,true,0.3,0,0.6);
+	sprite_index = sPlayerThrust
+	motion_add(facing,accel);
+}
+else 
+{
+	sprite_index = sPlayer
+	if audio_is_playing(sfx_thruster) audio_stop_sound(sfx_thruster)
+}
 
 if speed > maxSpeed speed = maxSpeed
 		  
@@ -46,6 +56,14 @@ if land == true and landPoint != noone
 	state = playerStateLand;
 }
 
+if place_meeting(x,y,oWall)
+{
+	if !audio_is_playing(sfx_PlayerDeath) audio_play_sound(sfx_PlayerDeath,800,false)
+	instance_create_layer(x,y,"Instances",oExplosion2);
+	state = playerStateDefeat
+	screenShake(10,120)
+	
+}
 
 //show_debug_message("direction: "+string(direction))
 //show_debug_message("facing: "+string(facing))
@@ -54,16 +72,16 @@ if land == true and landPoint != noone
 function playerStateLand(){
 	if facing != 90	//Get to vertical position
 	{
-		if facing > 90 facing --;
-		if facing < 90 facing ++;
+		if facing > 90 facing -= 2;
+		if facing < 90 facing += 2;
 		round(facing);
 	}
 	
-	if place_meeting(x,y,oWall) 
+	if place_meeting(x,y+1,oWall) 
 	{
 		show_debug_message("Player is grounded")
 		facing = 90;
-		landPoint = instance_place(x,y,oWall);
+		landPoint = instance_place(x,y+1,oWall);
 		y -= 1;
 		playerAnimateSprite();
 		state = playerStateGrounded
@@ -146,3 +164,13 @@ function playerStateGrounded(){
 		show_debug_message("Player is taking off")
 	}	
 }
+
+function playerStateDefeat(){
+	image_alpha = 0;
+	isDefeated++;
+	if isDefeated >= 120
+	oGui.missionLost = true;
+}
+	
+	
+	

@@ -1,9 +1,15 @@
 //GUI
 humansCurrent = 0;
 humansMax = 6;
-padding = 16;
+padding = 24;
 humanX = 16;	//Star position of drawing human icons to gui
 humanY = 16;
+
+health_x = 164;
+health_y = 24;
+displayHP = 0;
+
+
 
 
 //PAUSE MENU
@@ -15,6 +21,7 @@ humanY = 16;
 missionComplete = false;
 missionLost = false;
 animationFrame = 0;
+missionAlpha = 0;
 
 
 //TIMER VARS

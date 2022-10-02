@@ -6,12 +6,17 @@ for (var _i = 0; _i < humansMax; _i++)
 	draw_sprite(sHumanGui,_frame,humanX+(_i*padding),humanY);
 }
 
-
+if instance_exists(oPlayer)
+{
+displayHP = lerp(displayHP,oPlayer.HP,.1)	//The percentage between two points
+draw_UI_bar(displayHP,oPlayer.maxHP,health_x,health_y,64,8,c_red,c_aqua)
+}
 
 if missionComplete
 {
+	missionAlpha = min(0.5,missionAlpha+0.01)
 	if instance_exists(oTutorial) oTutorial.textCurrent = 10
-	draw_set_alpha(0.5)
+	draw_set_alpha(missionAlpha)
 	draw_sprite_stretched(sPixel,1,0,0,global.res_w,global.res_h);
 	drawSetText(c_white,tFont1,fa_center,fa_middle)	
 	draw_set_alpha(1)
@@ -23,16 +28,14 @@ if missionComplete
 
 if missionLost
 {
+	missionAlpha = min(0.5,missionAlpha+0.01)
 	if instance_exists(oTutorial) oTutorial.textCurrent = 10
-	draw_set_alpha(0.5)
-	draw_sprite_stretched_ext(sPixel,0,0,0,global.res_w,global.res_h,c_red,0.3);
+	//draw_set_alpha(missionAlpha)
+	draw_sprite_stretched_ext(sPixel,0,0,0,global.res_w,global.res_h,c_red,missionAlpha);
 	drawSetText(c_white,tFont1,fa_center,fa_middle)	
 	draw_set_alpha(1)
 	draw_text(global.res_w*0.5,global.res_h*0.4,"MISSION LOST")
 }
-
-
-
 
 
 //DRAW TIMER
@@ -40,8 +43,8 @@ if boxSections > 0 and boxSections < boxSectionsMax
 {
 	for (var _i = 0; _i < boxSections; _i++){
 		
+	draw_set_color(c_white);
 	draw_sprite_stretched(sTimerSections,_i,x1,y1+(-8*_i),boxWidth,-8)
-	draw_set_color(c_white)
 	var _yy = y1+(-8*_i)
 	draw_line(x1,_yy-8,x2-2,_yy-8)
 	}
