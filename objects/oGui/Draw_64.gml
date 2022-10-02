@@ -44,9 +44,9 @@ if boxSections > 0 and boxSections < boxSectionsMax
 	for (var _i = 0; _i < boxSections; _i++){
 		
 	draw_set_color(c_white);
-	draw_sprite_stretched(sTimerSections,_i,x1,y1+(-8*_i),boxWidth,-8)
-	var _yy = y1+(-8*_i)
-	draw_line(x1,_yy-8,x2-2,_yy-8)
+	draw_sprite_stretched(sTimerSections,_i,x1,y1+(-12*_i),boxWidth,-12)
+	var _yy = y1+(-12*_i)
+	draw_line(x1,_yy-12,x2-2,_yy-12)
 	}
 }
 

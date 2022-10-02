@@ -6,8 +6,8 @@ textCurrent = 0;
 if room = rLevel1//rLevel1
 {
 	text[0] = "Soon you will learn that your success depends on\nEVERY 10 SECONDS."
-	text[1] = "Steer using W,A,S, and D."
-	text[2] = "But first, use SPACEBAR to use your thrusters."
+	text[1] = "But first, steer using W,A,S, and D."
+	text[2] = "Use SPACEBAR to use your thrusters."
 	text[3] = "You can shoot buildings and enemies by pressing ENTER."
 	text[4] = "Shoot the RED prisons to free the humans."
 	text[5] = "Land by pressing SHIFT when close to the ground.\nRescue the Humans!"

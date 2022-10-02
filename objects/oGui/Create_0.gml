@@ -27,12 +27,12 @@ missionAlpha = 0;
 //TIMER VARS
 x1 = global.res_w-54
 x2 = global.res_w-36
-y1 = global.res_h*0.4
-y2 = y1-96
+y1 = global.res_h*0.45
+y2 = y1-108
 boxWidth = x2-x1
-boxHeight = -96
+boxHeight = -108
 boxSections = 0;
-boxSectionsMax = 13;
+boxSectionsMax = 10;
 global.masterTimer = seconds(90);
 global.miniTimer = seconds(10);
 
