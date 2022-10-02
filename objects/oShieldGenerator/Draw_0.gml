@@ -34,12 +34,13 @@ if complete = true
 
 
 //DEBUG
+/*
 if keyboard_check_pressed(ord("T")) 
 {
 	if !audio_is_playing(sfx_armShield) audio_play_sound(sfx_armShield,800,false)
 	armed = true
 }
-
+*/
 
 draw_self();
 
