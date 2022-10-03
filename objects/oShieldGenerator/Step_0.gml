@@ -20,7 +20,10 @@ if armed = true
 //DEBUG AND JAM DEMONSTRATION
 if keyboard_check_pressed(ord("N")) and !instance_exists(oTransition)
 {
-	with oGame shieldComplete(other.id,other.level)
+	if oGui.missionComplete != true
+	{
+		with oGame shieldComplete(other.id,other.level)
+	}
 }
 
 
