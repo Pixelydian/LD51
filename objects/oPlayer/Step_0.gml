@@ -5,6 +5,8 @@ script_execute(state)
 
 
 //DEBUG
+
+
 /*
 if keyboard_check_pressed(ord("M")) 
 {
@@ -12,3 +14,4 @@ if keyboard_check_pressed(ord("M"))
 	state = playerStateDefeat
 	screenShake(10,120)
 }
+

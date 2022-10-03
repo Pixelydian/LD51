@@ -45,4 +45,6 @@ if keyboard_check_pressed(ord("P"))
 */
 
 
+
+
 timerScale = max(1,timerScale-0.04)
