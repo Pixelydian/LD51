@@ -18,7 +18,7 @@ if armed = true
 }
 
 //DEBUG AND JAM DEMONSTRATION
-if keyboard_check_pressed(ord("N"))
+if keyboard_check_pressed(ord("N")) and !instance_exists(oTransition)
 {
 	with oGame shieldComplete(other.id,other.level)
 }
